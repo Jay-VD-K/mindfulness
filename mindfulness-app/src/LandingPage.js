@@ -9,32 +9,32 @@ function LandingPage(props) {
 
   // static site code
 
-  const videos = [
-    // 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-    // 'https://www.youtube.com/watch?v=I5A66Q0jWvg',
-    // 'https://www.youtube.com/watch?v=uUkLlH9Vcqk',
-    // 'https://www.w3schools.com/html/mov_bbb.mp4',
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4'
-    ];
+  // const videos = [
+  //   // 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  //   // 'https://www.youtube.com/watch?v=I5A66Q0jWvg',
+  //   // 'https://www.youtube.com/watch?v=uUkLlH9Vcqk',
+  //   // 'https://www.w3schools.com/html/mov_bbb.mp4',
+  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+  //   'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4'
+  //   ];
 
-  const randomIndex = Math.floor(Math.random() * videos.length);
-  console.log("randome index::", randomIndex);
-  const selectedVideo = videos[randomIndex];
-
-  const handleStartClick = () => {
-    navigate('/meditation', { state: { videoUrl: selectedVideo, description: "nature sound", benefits:"relax" } });
-  };
+  // const randomIndex = Math.floor(Math.random() * videos.length);
+  // console.log("randome index::", randomIndex);
+  // const selectedVideo = videos[randomIndex];
 
   // const handleStartClick = () => {
- 
-  //   const nextPage = '/meditation';
-  
-  //   navigate('/questions', { state: nextPage  });
+  //   navigate('/meditation', { state: { videoUrl: selectedVideo, description: "nature sound", benefits:"relax" } });
   // };
+
+  const handleStartClick = () => {
+ 
+    const nextPage = '/meditation';
+  
+    navigate('/questions', { state: nextPage  });
+  };
 
   const handleHomeClick = () => {
     navigate('/');

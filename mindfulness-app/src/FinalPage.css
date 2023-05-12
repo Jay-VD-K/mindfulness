@@ -9,7 +9,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('D:\Projects\mindfulness\mindfulness-app\public\mindfulness_welcome.jpg');
+    background-image: url('/public/mindfulness_welcome.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
