@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './PostQuestionsPage.css'
 
-const Question = ({ questionText, onChange }) => {
+const Question = ({ questionText, answerOptions, onChange }) => {
   const [selectedValue, setSelectedValue] = useState('');
 
   const handleOptionChange = (e) => {
@@ -150,7 +150,7 @@ const Question = ({ questionText, onChange }) => {
         <h2 className="question-title">
           {questionText}</h2>
           <div className="answer-options">
-      <label>
+      {/* <label>
         <input type="radio" value="1" checked={selectedValue === "1"} onChange={handleOptionChange} />
         Strongly disagree
       </label>
@@ -177,7 +177,13 @@ const Question = ({ questionText, onChange }) => {
       <label>
         <input type="radio" value="7" checked={selectedValue === "7"} onChange={handleOptionChange} />
         Strongly agree
-      </label>
+      </label> */}
+      {answerOptions.map((option, index) => (
+              <label key={index}>
+                <input type="radio" value={option.value} checked={selectedValue === option.value} onChange={handleOptionChange} />
+                {option.label}
+              </label>
+            ))}
     </div>
     </div>
     

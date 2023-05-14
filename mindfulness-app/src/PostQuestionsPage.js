@@ -192,14 +192,28 @@ import './PostQuestionsPage.css';
 const PostQuestionsPage = () => {
   const questionSets = [
     [
-      { id: 'FPEB1', text: 'In the future, I will adequately complete assigned duties in environmentally friendly ways.' },
-      { id: 'FPEB2', text: 'In the future, I will fulfill responsibilities specified in my job description in environmentally-friendly ways.' }
+      { id: 'BV1', text: 'What is your ethnicity?', 
+        answerOptions: [
+          { label: "American Indian or Alaska Native", value: "1" },
+          { label: "Asian", value: "2" },
+          { label: "Black or African American", value: "3" },
+          { label: "Hispanic or Latino", value: "4" },
+          { label: "Native Hawaiian or Other Pacific Islander", value: "5" },
+          { label: "White or Caucasian", value: "6" },
+          { label: "Others", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'BV2', text: 'With which gender orientation do you most identify?',
+        answerOptions: [
+          { label: "Male", value: "1" },
+          { label: "Female", value: "2" },
+          { label: "Non-binary/third gender", value: "3" },
+          { label: "Prefer not to say", value: "4" },
+          { label: "Prefer to self-describe", value: "5" },
+        ],
+      },
     ],
-    [
-      { id: 'SET1Q1', text: 'Question 1 in set 2' },
-      { id: 'SET1Q2', text: 'Question 2 in set 2' },
-      { id: 'SET1Q3', text: 'Question 3 in set 2' }
-    ]
   ];
 
   const [currentQuestionSetIndex, setCurrentQuestionSetIndex] = useState(0);
@@ -229,11 +243,44 @@ const PostQuestionsPage = () => {
   }, [responses, questionSets, currentQuestionSetIndex]);
 
   const handleSubmit = async (e) => {
+    // e.preventDefault();
+    // const allResponses = {...responses};
+    // console.log("allResponses-----", allResponses);
+    // navigate(nextPage, { state: {videoUrl: videoUrl} });
     e.preventDefault();
     const allResponses = {...responses};
     console.log("allResponses-----", allResponses);
-    navigate(nextPage, { state: {videoUrl: videoUrl} });
+    
+    navigate(nextPage, { state: { videoUrl: videoUrl, description: "nature sound", benefits:"relax" } });
+
+    // try {
+    //   const response = await fetch('http://184.188.101.162:5000/savePostSurveyResponse', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(allResponses)
+    //   });
+  
+    //   if (!response.ok) {
+    //     throw new Error('Failed to get video URL');
+    //     // navigate('/meditation', { state: { videoUrl: 'https://www.dropbox.com/s/mvu95wbgrjsln94/1.mp4?raw=1', description: "nature sound", benefits:"relax" } });
+    //   }
+  
+    //   const data = await response.json();
+    //   const { videoUrl } = data;
+  
+    //   navigate('/meditation', {
+    //     state: {
+    //       videoUrl,
+    //       description: "nature sound", benefits:"relax"
+    //     }
+    //   });
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
+
 
   const handleContinueClick = (e) => {
     e.preventDefault();
@@ -278,6 +325,7 @@ const PostQuestionsPage = () => {
         <Question
           key={question.id}
           questionText={question.text}
+          answerOptions={question.answerOptions}
           onChange={(value) => handleQuestionChange(question.id, value)}
         />
       ))}
@@ -318,5 +366,4 @@ const PostQuestionsPage = () => {
 };
 
 export default PostQuestionsPage;
-
 

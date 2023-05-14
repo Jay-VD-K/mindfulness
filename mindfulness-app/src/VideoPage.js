@@ -9,12 +9,12 @@ function VideoPage() {
 //   const videoRef = useRef(null);
   const navigate = useNavigate();
 
-	// const [videoEnded, setVideoEnded] = useState(false);
+	const [videoEnded, setVideoEnded] = useState(false);
 
-  // const handleVideoEnded = () => {
-  //   // videoRef.current.controls = true;
-	// 	setVideoEnded(true);
-  // };
+  const handleVideoEnded = () => {
+    // videoRef.current.controls = true;
+		setVideoEnded(true);
+  };
 
   const handleCompleteClick = () => {
   
@@ -31,7 +31,7 @@ function VideoPage() {
         // ref={videoRef}
         className="video-page-player"
         src={videoUrl}
-        // onEnded={handleVideoEnded}
+        onEnded={handleVideoEnded}
         autoPlay
 				// style={{ width: '100vw', height: '100vh' }}
       />
@@ -40,11 +40,11 @@ function VideoPage() {
           <h2 className="video-title">Video Title</h2>
         </div>
       )} */}
-			{/* {videoEnded && ( */}
+			{videoEnded && (
       <div className="video-page-button-container">
         <button className="video-page-complete-button" onClick={handleCompleteClick}>Complete Survey</button>
       </div>
-			{/* )} */}
+			)} 
     </div>
   );
 }
