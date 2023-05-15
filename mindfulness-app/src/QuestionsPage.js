@@ -28,413 +28,413 @@ const QuestionsPage = () => {
           { label: "Prefer to self-describe", value: "5" },
         ],
       },
+    // ],
+    ], [
+      { id: 'BV3', text: 'What is your current religion or spiritual orientation, if any?',
+        answerOptions: [
+          { label: "Christian", value: "1" },
+          { label: "Jewish", value: "2" },
+          { label: "Muslim", value: "3" },
+          { label: "Sikh", value: "4" },
+          { label: "Hindu", value: "5" },
+          { label: "Buddhist", value: "6" },
+          { label: "Atheist('do not belive in God')", value: "7" },
+          { label: "Agnostic('not sure if there is God')", value: "8" },
+          { label: "Something else", value: "9" },
+          { label: "Nothing in particular", value: "10" },
+          { label: "Refuse to say", value: "11" },
+        ],
+      },
+    ], [
+      { id: 'BV4', text: 'Which living community do you feel at home?',
+        answerOptions: [
+          { label: "Rural area", value: "1" },
+          { label: "Large city", value: "2" },
+          { label: "Suburb near a large city (peri-urban)", value: "3" },
+          { label: "Small city or town", value: "4" },
+          { label: "Others", value: "5" },
+        ],
+      },
+    ], [
+      { id: 'BV5', text: 'How often did you visit natural attractions around Gainesville (e.g., Kanapaha Botanical Garden, Loblollywoods South, or St. Augustine Beach) within the last 6 months?',
+        answerOptions: [
+          { label: "Never", value: "1" },
+          { label: "A few times", value: "2" },
+          { label: "Around once a month", value: "3" },
+          { label: "Around twice a week", value: "4" },
+          { label: "Around once a week", value: "5" },
+          { label: "More than once a week", value: "6" },
+        ],
+      },
+    ], [
+      { id: 'BV6', text: 'How often do you engage in outdoor activities (in nature)?',
+        answerOptions: [
+          { label: "Less than once per week", value: "1" },
+          { label: "More than once per week", value: "2" },
+          { label: "Once weekly", value: "3" },
+          { label: "Once Monthly", value: "4" },
+          { label: "Twice or more times per month", value: "5" },
+        ],
+      },
+    ], [
+      { id: 'BV7', text: 'How often do you meditate?',
+        answerOptions: [
+          { label: "I don't know how to meditate", value: "1" },
+          { label: "I know how to meditate but did not meditate in the past 12 months ", value: "2" },
+          { label: "A few times over the past 12 months but less than once a week", value: "3" },
+          { label: "Once a week", value: "4" },
+          { label: "More than once a week but not daily", value: "5" },
+          { label: "Daily", value: "6" },
+        ],
+      },
+    ], [
+      { id: 'BV8', text: 'Humans are intimately connected to oceans, rivers, mountains, and forests',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Somewhat disagree", value: "2" },
+          { label: "Neither agree nor disagree", value: "3" },
+          { label: "Somewhat agree", value: "4" },
+          { label: "Strongly agree", value: "5" },
+        ],
+      },
+    ], [
+      { id: 'BV9', text: 'How many credit hours do you take this semester?',
+        answerOptions: [
+          { label: "Equal or less than 3", value: "1" },
+          { label: "3< and =<6", value: "2" },
+          { label: "6< and =<9", value: "3" },
+          { label: "More than 9", value: "4" },
+        ],
+      },
+      // { id: 'BV10', text: 'In which academic college is your major at UF?',
+      // // ************************************************************************
+      //   answerOptions: [
+      //     { label: "Equal or less than 3", value: "1" },
+      //     { label: "3< and =<6", value: "2" },
+      //     { label: "6< and =<9", value: "3" },
+      //     { label: "More than 9", value: "4" },
+      //   ],
+      // },
+      { id: 'BV11', text: 'What is your academic class standing?',
+        answerOptions: [
+          { label: "First-year", value: "1" },
+          { label: "Sophomore", value: "2" },
+          { label: "Junior", value: "3" },
+          { label: "Senior", value: "4" },
+          { label: "Graduate or Professional", value: "5" },
+        ],
+      },
+      { id: 'BV12', text: 'Do you have a part-time job apart from your study?',
+        answerOptions: [
+          { label: "Yes", value: "1" },
+          { label: "No", value: "2" },
+        ],
+      },
+    ], [
+      { id: 'BV13', text: 'In the last month, how often were you in an anxious mood (felt worried, anticipation of the worst, fearful anticipation, irritable)?',
+        answerOptions: [
+          { label: "Never", value: "0" },
+          { label: "Almost Never", value: "1" },
+          { label: "Sometimes", value: "2" },
+          { label: "Fairly Often", value: "3" },
+          { label: "Very Often", value: "4" },
+        ],
+      },
+      { id: 'BV14', text: 'In the last month, how often have you found that you could not cope with all the things that you had to do?',
+        answerOptions: [
+          { label: "Never", value: "0" },
+          { label: "Almost Never", value: "1" },
+          { label: "Sometimes", value: "2" },
+          { label: "Fairly Often", value: "3" },
+          { label: "Very Often", value: "4" },
+        ],
+      },
+      { id: 'BV15', text: 'What’s your perceived level of financial burden?',
+        answerOptions: [
+          { label: "None", value: "0" },
+          { label: "Slight", value: "1" },
+          { label: "Somewwhat", value: "2" },
+          { label: "Significant", value: "3" },
+          { label: "Unmanageable", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'BV16', text: 'Thinking about the last month, on average, how many nights a week do you have a problem with your sleep?',
+        answerOptions: [
+          { label: "0 to 1 Night", value: "1" },
+          { label: "2 Nights", value: "2" },
+          { label: "3 Nights", value: "3" },
+          { label: "4 Nights", value: "4" },
+          { label: "5 to 7 Nights", value: "5" },
+        ],
+      },
+      { id: 'BV17', text: 'Thinking about a typical night in the last month, how would you rate your sleep quality?',
+        answerOptions: [
+          { label: "very good", value: "1" },
+          { label: "Good", value: "2" },
+          { label: "Average", value: "3" },
+          { label: "Poor", value: "4" },
+          { label: "Very Poor", value: "5" },
+        ],
+      },
     ],
-    // ], [
-    //   { id: 'BV3', text: 'What is your current religion or spiritual orientation, if any?',
-    //     answerOptions: [
-    //       { label: "Christian", value: "1" },
-    //       { label: "Jewish", value: "2" },
-    //       { label: "Muslim", value: "3" },
-    //       { label: "Sikh", value: "4" },
-    //       { label: "Hindu", value: "5" },
-    //       { label: "Buddhist", value: "6" },
-    //       { label: "Atheist('do not belive in God')", value: "7" },
-    //       { label: "Agnostic('not sure if there is God')", value: "8" },
-    //       { label: "Something else", value: "9" },
-    //       { label: "Nothing in particular", value: "10" },
-    //       { label: "Refuse to say", value: "11" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV4', text: 'Which living community do you feel at home?',
-    //     answerOptions: [
-    //       { label: "Rural area", value: "1" },
-    //       { label: "Large city", value: "2" },
-    //       { label: "Suburb near a large city (peri-urban)", value: "3" },
-    //       { label: "Small city or town", value: "4" },
-    //       { label: "Others", value: "5" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV5', text: 'How often did you visit natural attractions around Gainesville (e.g., Kanapaha Botanical Garden, Loblollywoods South, or St. Augustine Beach) within the last 6 months?',
-    //     answerOptions: [
-    //       { label: "Never", value: "1" },
-    //       { label: "A few times", value: "2" },
-    //       { label: "Around once a month", value: "3" },
-    //       { label: "Around twice a week", value: "4" },
-    //       { label: "Around once a week", value: "5" },
-    //       { label: "More than once a week", value: "6" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV6', text: 'How often do you engage in outdoor activities (in nature)?',
-    //     answerOptions: [
-    //       { label: "Less than once per week", value: "1" },
-    //       { label: "More than once per week", value: "2" },
-    //       { label: "Once weekly", value: "3" },
-    //       { label: "Once Monthly", value: "4" },
-    //       { label: "Twice or more times per month", value: "5" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV7', text: 'How often do you meditate?',
-    //     answerOptions: [
-    //       { label: "I don't know how to meditate", value: "1" },
-    //       { label: "I know how to meditate but did not meditate in the past 12 months ", value: "2" },
-    //       { label: "A few times over the past 12 months but less than once a week", value: "3" },
-    //       { label: "Once a week", value: "4" },
-    //       { label: "More than once a week but not daily", value: "5" },
-    //       { label: "Daily", value: "6" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV8', text: 'Humans are intimately connected to oceans, rivers, mountains, and forests',
-    //     answerOptions: [
-    //       { label: "Strongly disagree", value: "1" },
-    //       { label: "Somewhat disagree", value: "2" },
-    //       { label: "Neither agree nor disagree", value: "3" },
-    //       { label: "Somewhat agree", value: "4" },
-    //       { label: "Strongly agree", value: "5" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV9', text: 'How many credit hours do you take this semester?',
-    //     answerOptions: [
-    //       { label: "Equal or less than 3", value: "1" },
-    //       { label: "3< and =<6", value: "2" },
-    //       { label: "6< and =<9", value: "3" },
-    //       { label: "More than 9", value: "4" },
-    //     ],
-    //   },
-    //   // { id: 'BV10', text: 'In which academic college is your major at UF?',
-    //   // // ************************************************************************
-    //   //   answerOptions: [
-    //   //     { label: "Equal or less than 3", value: "1" },
-    //   //     { label: "3< and =<6", value: "2" },
-    //   //     { label: "6< and =<9", value: "3" },
-    //   //     { label: "More than 9", value: "4" },
-    //   //   ],
-    //   // },
-    //   { id: 'BV11', text: 'What is your academic class standing?',
-    //     answerOptions: [
-    //       { label: "First-year", value: "1" },
-    //       { label: "Sophomore", value: "2" },
-    //       { label: "Junior", value: "3" },
-    //       { label: "Senior", value: "4" },
-    //       { label: "Graduate or Professional", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'BV12', text: 'Do you have a part-time job apart from your study?',
-    //     answerOptions: [
-    //       { label: "Yes", value: "1" },
-    //       { label: "No", value: "2" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV13', text: 'In the last month, how often were you in an anxious mood (felt worried, anticipation of the worst, fearful anticipation, irritable)?',
-    //     answerOptions: [
-    //       { label: "Never", value: "0" },
-    //       { label: "Almost Never", value: "1" },
-    //       { label: "Sometimes", value: "2" },
-    //       { label: "Fairly Often", value: "3" },
-    //       { label: "Very Often", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'BV14', text: 'In the last month, how often have you found that you could not cope with all the things that you had to do?',
-    //     answerOptions: [
-    //       { label: "Never", value: "0" },
-    //       { label: "Almost Never", value: "1" },
-    //       { label: "Sometimes", value: "2" },
-    //       { label: "Fairly Often", value: "3" },
-    //       { label: "Very Often", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'BV15', text: 'What’s your perceived level of financial burden?',
-    //     answerOptions: [
-    //       { label: "None", value: "0" },
-    //       { label: "Slight", value: "1" },
-    //       { label: "Somewwhat", value: "2" },
-    //       { label: "Significant", value: "3" },
-    //       { label: "Unmanageable", value: "4" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'BV16', text: 'Thinking about the last month, on average, how many nights a week do you have a problem with your sleep?',
-    //     answerOptions: [
-    //       { label: "0 to 1 Night", value: "1" },
-    //       { label: "2 Nights", value: "2" },
-    //       { label: "3 Nights", value: "3" },
-    //       { label: "4 Nights", value: "4" },
-    //       { label: "5 to 7 Nights", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'BV17', text: 'Thinking about a typical night in the last month, how would you rate your sleep quality?',
-    //     answerOptions: [
-    //       { label: "very good", value: "1" },
-    //       { label: "Good", value: "2" },
-    //       { label: "Average", value: "3" },
-    //       { label: "Poor", value: "4" },
-    //       { label: "Very Poor", value: "5" },
-    //     ],
-    //   },
-    // ],
     
     
     
-    // // SMSPA
-    // [
-    //   { id: 'SMSPA1', text: 'I was aware of different emotions that arose in me.', 
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA2', text: 'I noticed pleasant and unpleasant emotions.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA3', text: 'I noticed pleasant and unpleasant thoughts.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA4', text: 'I noticed emotions come and go.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'SMSPA5', text: 'I noticed thoughts come and go.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA6', text: 'It was interesting to see the patterns of my thinking.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA7', text: 'I focused on the movement of my body.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA8', text: 'I felt present in my body.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    // ], [
-    //   { id: 'SMSPA9', text: 'I listened to what my body was telling me.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA10', text: 'I was aware of how my body felt.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA11', text: 'I noticed the sensations in my body.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    //   { id: 'SMSPA12', text: 'I was in tune with how hard my muscles were working.',
-    //     answerOptions: [
-    //       { label: "Not at all", value: "0" },
-    //       { label: "A little", value: "1" },
-    //       { label: "Moderately", value: "2" },
-    //       { label: "Quite a bit", value: "3" },
-    //       { label: "Very much", value: "4" },
-    //     ],
-    //   },
-    // ],
-    // [
-    //   { id: 'FFMQ1', text: 'When I take a shower or a bath, I stay alert to the sensations of water on my body.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ2', text: 'I’m good at finding words to describe my feelings.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //     },
-    //   { id: 'FFMQ3', text: 'I don’t pay attention to what I’m doing because I’m dreaming, worrying, or otherwise distracted.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ4', text: 'I believe some of my thoughts are abnormal or bad and I shouldn’t think that way.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ5', text: 'When I have distressing thoughts or images, I “step back” and am aware of the thought or image without getting taken over by it.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    // ],
-    // [
-    //   { id: 'FFMQ6', text: 'I notice how foods and drinks affect my thoughts, bodily sensations, and emotions.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ7', text: 'I have trouble thinking of the right words to express how I feel about things.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ8', text: 'I do jobs or tasks automatically without being aware of what I’m doing.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ9', text: 'I think some of my emotions are bad or inappropriate and I shouldn’t feel them.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ10', text: 'When I have distressing thoughts or images I am able just to notice them without reacting.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    // ],
-    // [
-    //   { id: 'FFMQ11', text: 'I pay attention to sensations, such as the wind in my hair or sun on my face.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ12', text: 'Even when I’m feeling terribly upset I can find a way to put it into words.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ13', text: 'I find myself doing things without paying attention.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ14', text: 'I tell myself I shouldn’t be feeling the way I’m feeling.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    //   { id: 'FFMQ15', text: 'When I have distressing thoughts or images I just notice them and let them go.',
-    //     answerOptions: [
-    //       { label: "Never or very rarely true", value: "1" },
-    //       { label: "Rarely true", value: "2" },
-    //       { label: "Sometime true", value: "3" },
-    //       { label: "Often true", value: "4" },
-    //       { label: "Very often or always true", value: "5" },
-    //     ],
-    //   },
-    // ]
+    // SMSPA
+    [
+      { id: 'SMSPA1', text: 'I was aware of different emotions that arose in me.', 
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA2', text: 'I noticed pleasant and unpleasant emotions.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA3', text: 'I noticed pleasant and unpleasant thoughts.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA4', text: 'I noticed emotions come and go.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'SMSPA5', text: 'I noticed thoughts come and go.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA6', text: 'It was interesting to see the patterns of my thinking.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA7', text: 'I focused on the movement of my body.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA8', text: 'I felt present in my body.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'SMSPA9', text: 'I listened to what my body was telling me.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA10', text: 'I was aware of how my body felt.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA11', text: 'I noticed the sensations in my body.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+      { id: 'SMSPA12', text: 'I was in tune with how hard my muscles were working.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Very much", value: "4" },
+        ],
+      },
+    ],
+    [
+      { id: 'FFMQ1', text: 'When I take a shower or a bath, I stay alert to the sensations of water on my body.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ2', text: 'I’m good at finding words to describe my feelings.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+        },
+      { id: 'FFMQ3', text: 'I don’t pay attention to what I’m doing because I’m dreaming, worrying, or otherwise distracted.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ4', text: 'I believe some of my thoughts are abnormal or bad and I shouldn’t think that way.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ5', text: 'When I have distressing thoughts or images, I “step back” and am aware of the thought or image without getting taken over by it.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+    ],
+    [
+      { id: 'FFMQ6', text: 'I notice how foods and drinks affect my thoughts, bodily sensations, and emotions.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ7', text: 'I have trouble thinking of the right words to express how I feel about things.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ8', text: 'I do jobs or tasks automatically without being aware of what I’m doing.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ9', text: 'I think some of my emotions are bad or inappropriate and I shouldn’t feel them.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ10', text: 'When I have distressing thoughts or images I am able just to notice them without reacting.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+    ],
+    [
+      { id: 'FFMQ11', text: 'I pay attention to sensations, such as the wind in my hair or sun on my face.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ12', text: 'Even when I’m feeling terribly upset I can find a way to put it into words.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ13', text: 'I find myself doing things without paying attention.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ14', text: 'I tell myself I shouldn’t be feeling the way I’m feeling.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+      { id: 'FFMQ15', text: 'When I have distressing thoughts or images I just notice them and let them go.',
+        answerOptions: [
+          { label: "Never or very rarely true", value: "1" },
+          { label: "Rarely true", value: "2" },
+          { label: "Sometime true", value: "3" },
+          { label: "Often true", value: "4" },
+          { label: "Very often or always true", value: "5" },
+        ],
+      },
+    ]
   ];
 
   const [currentQuestionSetIndex, setCurrentQuestionSetIndex] = useState(0);
@@ -474,34 +474,34 @@ const QuestionsPage = () => {
     const allResponses = {...responses};
     console.log("allResponses-----", allResponses);
     
-    navigate('/meditation', { state: { videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: "nature sound", benefits:"relax" } });
+    // navigate('/meditation', { state: { videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4', description: "nature sound", benefits:"relax" } });
 
-    // try {
-    //   const response = await fetch('http://184.188.101.162:5000/recommendVideo', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(allResponses)
-    //   });
+    try {
+      const response = await fetch('http://minfulness-api.ue.r.appspot.com/recommendVideo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(allResponses)
+      });
   
-    //   if (!response.ok) {
-    //     throw new Error('Failed to get video URL');
-    //     // navigate('/meditation', { state: { videoUrl: 'https://www.dropbox.com/s/mvu95wbgrjsln94/1.mp4?raw=1', description: "nature sound", benefits:"relax" } });
-    //   }
+      if (!response.ok) {
+        throw new Error('Failed to get video URL');
+        // navigate('/meditation', { state: { videoUrl: 'https://www.dropbox.com/s/mvu95wbgrjsln94/1.mp4?raw=1', description: "nature sound", benefits:"relax" } });
+      }
   
-    //   const data = await response.json();
-    //   const { videoUrl } = data;
+      const data = await response.json();
+      const { videoUrl } = data;
   
-    //   navigate('/meditation', {
-    //     state: {
-    //       videoUrl,
-    //       description: "nature sound", benefits:"relax"
-    //     }
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
+      navigate('/meditation', {
+        state: {
+          videoUrl,
+          description: "nature sound", benefits:"relax"
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
   
   const handleContinueClick = (e) => {

@@ -40,11 +40,11 @@ function VideoPage() {
           <h2 className="video-title">Video Title</h2>
         </div>
       )} */}
-			{videoEnded && (
+			{/* {videoEnded && ( */}
       <div className="video-page-button-container">
         <button className="video-page-complete-button" onClick={handleCompleteClick}>Complete Survey</button>
       </div>
-			)} 
+			{/* )}  */}
     </div>
   );
 }
