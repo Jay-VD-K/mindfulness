@@ -40,7 +40,7 @@ function FinalPage() {
     <div className="final-page">
       <header className="header">
         <div className="logo-container">
-          <img src="your-logo.png" alt="Your Logo" />
+          <img src="mlogo.png" alt="Your Logo" />
         </div>
         <div className="nav-links">
         <a href="#" onClick={handleHomeClick}>Home</a>

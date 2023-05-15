@@ -187,33 +187,697 @@
 import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import { useNavigate, useLocation } from 'react-router-dom';
-import './PostQuestionsPage.css';
+import './QuestionsPage.css';
 
 const PostQuestionsPage = () => {
   const questionSets = [
     [
-      { id: 'BV1', text: 'What is your ethnicity?', 
+      { id: 'mDES1', text: 'I felt amused, fun-loving, or silly.',
         answerOptions: [
-          { label: "American Indian or Alaska Native", value: "1" },
-          { label: "Asian", value: "2" },
-          { label: "Black or African American", value: "3" },
-          { label: "Hispanic or Latino", value: "4" },
-          { label: "Native Hawaiian or Other Pacific Islander", value: "5" },
-          { label: "White or Caucasian", value: "6" },
-          { label: "Others", value: "7" },
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
         ],
       },
     ], [
-      { id: 'BV2', text: 'With which gender orientation do you most identify?',
+      { id: 'mDES2', text: 'I felt angry, irritated, or annoyed.',
         answerOptions: [
-          { label: "Male", value: "1" },
-          { label: "Female", value: "2" },
-          { label: "Non-binary/third gender", value: "3" },
-          { label: "Prefer not to say", value: "4" },
-          { label: "Prefer to self-describe", value: "5" },
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
         ],
       },
-    ],
+    ], [
+      { id: 'mDES3', text: 'I felt ashamed, humiliated, or disgraced.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES4', text: 'I felt awe, wonder, or amazement.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES5', text: 'I felt contemptuous, scornful, or distainful.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES6', text: 'I felt disgust, distaste, or revulsion.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES7', text: 'I felt embarrassed, self-conscious, or blushing.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES8', text: 'I felt grateful, appreciative, or thankful.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES9', text: 'I felt guilty, repentant, or blame worthy.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES10', text: 'I felt hate, distrust, or suspicion.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES11', text: 'I felt hopeful, optimistic, or encouraged.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES12', text: 'I felt inspired, uplifted, or elevated.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES13', text: 'I felt interested, alert, or curious.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES14', text: 'I felt joyful, glad, or happy.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES15', text: 'I felt love, closeness, or trust.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES16', text: 'I felt proud, confident, or self-assured.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES17', text: 'I felt sad, downhearted, or unhappy.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES18', text: 'I felt scared, fearful, or afraid.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES19', text: 'I felt serene, content, or peaceful.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      { id: 'mDES20', text: 'I felt stressed, nervous, or overwhelmed.',
+        answerOptions: [
+          { label: "Not at all", value: "0" },
+          { label: "A little bit", value: "1" },
+          { label: "Moderately", value: "2" },
+          { label: "Quite a bit", value: "3" },
+          { label: "Extremely", value: "4" },
+        ],
+      },
+    ], [
+      // PRS
+      { id: 'PRSB1', text: 'It is an escape experience.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSB2', text: 'Spending time here gives me a good break from my day-to-day routine.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSF1', text: 'The setting has fascinating qualities.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSF2', text: 'My attention is drawn to many interesting things.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], 
+    [
+      { id: 'PRSF3', text: 'I would like to get to know this place better.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSF4', text: 'There is much to explore and discover here.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSF5', text: 'I would like to spend more time looking at the surroundings.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCh1', text: 'There is too much going on.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCh2', text: 'It is a confusing place.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCh3', text: 'There is a great deal of distraction.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCh4', text: 'It is chaotic here.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCp1', text: 'I can do things I like here.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCp2', text: 'I have a sense that I belong here.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCp3', text: 'I have a sense of oneness with this setting.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCp4', text: 'Being here suits my personality.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'PRSCp5', text: 'I could find ways to enjoy myself in a place like this.',
+        answerOptions: [
+          { label: "Very untrue of me", value: "1" },
+          { label: "Untrue of me", value: "2" },
+          { label: "Somewhat untrue of me", value: "3" },
+          { label: "Neutral", value: "4" },
+          { label: "Somewhat true of me", value: "5" },
+          { label: "True of me", value: "6" },
+          { label: "Very true of me", value: "7" },
+        ],
+      },
+    ], [
+    //  EQNS
+      { id: 'EQNS1', text: 'I think that I would like to visit the website in the future because of the experience quality of the nature sounds.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQNS2', text: 'The nature sounds on the website is easy to experience virtually.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQNS3', text: 'I would imagine that people would learn to experience this new type of nature sounds virtual display in the future.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQNS4', text: 'I felt confident experiencing the nature sounds on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQNS5', text: 'I felt the nature sounds were well integrated with other elements to be displayed on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      // EQND
+      { id: 'EQND1', text: 'I think that I would like to visit the website in the future because of the experience quality of the nature destinations.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQND2', text: 'The nature destinations on the website is easy to experience virtually.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQND3', text: 'I would imagine that people would learn to experience this new type of nature destinations virtual display in the future.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQND4', text: 'I felt confident experiencing the nature destinations on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQND5', text: 'I felt the nature destinations were well integrated with other elements to be displayed on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      // EQGM
+      { id: 'EQGM1', text: 'I think that I would like to visit the website in the future because of the experience quality of the guided meditation.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQGM2', text: 'The guided meditation on the website is easy to experience virtually.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQGM3', text: 'I would imagine that people would learn to experience this new type of guided meditation virtual display in the future.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQGM4', text: 'I felt confident experiencing the guided meditation on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'EQGM5', text: 'I felt the guided meditation was well integrated with other elements to be displayed on the website.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'OEQ1', text: 'Overall, how would you rate the experience quality of the nature sound presented on the website?',
+        answerOptions: [
+          { label: "Extremly good disagree", value: "1" },
+          { label: "Very good", value: "2" },
+          { label: "Good", value: "3" },
+          { label: "Moderate", value: "4" },
+          { label: "Poor", value: "5" },
+          { label: "Very Poor", value: "6" },
+          { label: "Extremely poor", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'OEQ2', text: 'Overall, how would you rate the experience quality of the nature destination presented on the website?',
+        answerOptions: [
+          { label: "Extremly good disagree", value: "1" },
+          { label: "Very good", value: "2" },
+          { label: "Good", value: "3" },
+          { label: "Moderate", value: "4" },
+          { label: "Poor", value: "5" },
+          { label: "Very Poor", value: "6" },
+          { label: "Extremely poor", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'OEQ3', text: 'Overall, how would you rate the experience quality of the guided meditation presented on the website?',
+        answerOptions: [
+          { label: "Extremly good disagree", value: "1" },
+          { label: "Very good", value: "2" },
+          { label: "Good", value: "3" },
+          { label: "Moderate", value: "4" },
+          { label: "Poor", value: "5" },
+          { label: "Very Poor", value: "6" },
+          { label: "Extremely poor", value: "7" },
+        ],
+      },
+    ], [
+      // FPEB
+      { id: 'FPEB1', text: 'In the future, I will adequately complete assigned duties in environmentally friendly ways.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'FPEB2', text: 'In the future, I will fulfill responsibilities specified in my job description in environmentally-friendly ways.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'FPEB3', text: 'In the future, I will perform tasks that are expected of me in environmentally-friendly ways.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'FPEB4', text: 'In the future, I will take a chance to get actively involved in environmental protection at work.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'FPEB5', text: 'In the future, I will take initiative to act in environmentally-friendly ways at work.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], [
+      { id: 'FPEB6', text: 'In the future, I will do more for the environment at work than I was expected to.',
+        answerOptions: [
+          { label: "Strongly disagree", value: "1" },
+          { label: "Disagree", value: "2" },
+          { label: "Somewhat disagree", value: "3" },
+          { label: "Neither agree or disagree", value: "4" },
+          { label: "Somewhat agree", value: "5" },
+          { label: "Agree", value: "6" },
+          { label: "Strongly agree", value: "7" },
+        ],
+      },
+    ], 
   ];
 
   const [currentQuestionSetIndex, setCurrentQuestionSetIndex] = useState(0);
@@ -251,34 +915,34 @@ const PostQuestionsPage = () => {
     const allResponses = {...responses};
     console.log("allResponses-----", allResponses);
     
-    navigate(nextPage, { state: { videoUrl: videoUrl, description: "nature sound", benefits:"relax" } });
+    // navigate(nextPage, { state: { videoUrl: videoUrl, description: "nature sound", benefits:"relax" } });
 
-    // try {
-    //   const response = await fetch('http://184.188.101.162:5000/savePostSurveyResponse', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify(allResponses)
-    //   });
+    try {
+      const response = await fetch('http://minfulness-api.ue.r.appspot.com/savePostSurveyResponse', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(allResponses)
+      });
   
-    //   if (!response.ok) {
-    //     throw new Error('Failed to get video URL');
-    //     // navigate('/meditation', { state: { videoUrl: 'https://www.dropbox.com/s/mvu95wbgrjsln94/1.mp4?raw=1', description: "nature sound", benefits:"relax" } });
-    //   }
+      if (!response.ok) {
+        throw new Error('Failed to get video URL');
+        // navigate('/meditation', { state: { videoUrl: 'https://www.dropbox.com/s/mvu95wbgrjsln94/1.mp4?raw=1', description: "nature sound", benefits:"relax" } });
+      }
   
-    //   const data = await response.json();
-    //   const { videoUrl } = data;
+      const data = await response.json();
+      const { videoUrl } = data;
   
-    //   navigate('/meditation', {
-    //     state: {
-    //       videoUrl,
-    //       description: "nature sound", benefits:"relax"
-    //     }
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    // }
+      navigate(nextPage, {
+        state: {
+          videoUrl,
+          description: "nature sound", benefits:"relax"
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
 
@@ -366,4 +1030,5 @@ const PostQuestionsPage = () => {
 };
 
 export default PostQuestionsPage;
+
 
