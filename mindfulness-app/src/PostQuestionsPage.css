@@ -99,3 +99,42 @@
   .continue-button:hover {
     background-color: #D7ECC5;
   }
+
+  .mcq-container {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    max-width: 90%;
+  }
+  
+  .mcq-question {
+    margin-bottom: 20px;
+    display: flex;
+  }
+
+  .mcq-question p{
+    max-width: 100%;
+  }
+
+  .mcq-question label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 10%;
+    margin: 0 20px;
+    padding: 10px;
+  }
+
+  .mcq-question input {
+    margin-bottom: 10px;;
+  }
+  
+  .mcq-response {
+    display: flex;
+  }
+  
+  .mcq-response input[type="radio"] {
+    margin-right: 10px;
+  }
+  
